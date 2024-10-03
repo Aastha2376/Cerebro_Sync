@@ -1,0 +1,58 @@
+/* src/components/Header.css */
+
+.header {
+  background-color: #3f87f5; /* Blue gradient or color */
+  display: flex;
+  justify-content: space-between; /* Ensures logo on left and navbar on right */
+  align-items: center;
+  padding: 0.5rem 2rem; /* Reduced padding for a more compact navbar */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
+  position: relative; /* Ensures it's at the top without fixed position */
+  z-index: 1; /* Ensures it's above the content */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem; /* Space between the items */
+}
+
+.navbar ul li a,
+.navbar ul li button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li button:hover {
+  background-color: #2b6fdb;
+}
+
+.login-btn {
+  background-color: #9b59b6;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+  opacity: 0.9;
+}
