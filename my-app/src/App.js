@@ -3,6 +3,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';  // Import Hero component
+import AboutUs from './components/AboutUs';  // Import AboutUs component
 import './App.css';
 
 function App() {
@@ -14,9 +15,12 @@ function App() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Other Content */}
+      {/* Main Content */}
       <main>
-        {/* Add other sections like Features, FAQs, etc. */}
+        {/* About Us Section */}
+        <AboutUs />
+        
+        {/* You can add other sections like Features, Contact, etc., here in the future */}
       </main>
     </div>
   );
