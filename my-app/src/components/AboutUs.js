@@ -51,6 +51,7 @@ const AboutUs = () => {
   };
 
   return (
+    <div className='container'>
     <section className="about-us-container">
       <div className="flashcard">
         <div className="flashcard-emoji">{flashcardsData[currentFlashcard].emoji}</div>
@@ -60,6 +61,7 @@ const AboutUs = () => {
       <button className="arrow left-arrow" onClick={handlePrev}>⬅</button>
       <button className="arrow right-arrow" onClick={handleNext}>➡</button>
     </section>
+    </div>
   );
 };
 
