@@ -1,6 +1,12 @@
+body{
+    background: linear-gradient(135deg, #4c69d8, #6e2edc, #2ecc71, #e74c3c);    
+}
 .about-us-container {
-    width: 100vw;
-    height: 100vh;
+    
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,23 +15,27 @@
     margin: 0;
     padding: 0;
     flex-direction: column;
-    background: linear-gradient(135deg, #4c69d8, #6e2edc); /* Hero-like gradient */
+    background: none;
+    background-size:contain;
     text-align: center;
     padding: 2rem;
 }
 
 /* Adding animated circles like the hero section */
 .about-us-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin: 0;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #4c69d8, #6e2edc, #2ecc71, #e74c3c);
-    opacity: 0.8;
-    z-index: 0;
-    animation: backgroundShift 10s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Prevents horizontal scrollbar */
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
 }
 
 .flashcard {
