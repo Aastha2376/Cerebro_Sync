@@ -1,80 +1,178 @@
-/* src/components/AboutUs.css */
-
 .about-us-container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, #4c69d8, #6e2edc);
-    overflow: hidden;
-  }
-  
-  .flashcard {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
+    overflow: hidden; /* Prevents horizontal scrollbar */
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background: linear-gradient(135deg, #4c69d8, #6e2edc); /* Hero-like gradient */
     text-align: center;
-    width: 300px;
-    transition: transform 0.5s ease;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1;
-    transform: scale(1);
-    animation: fadeIn 0.5s ease-out;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  .flashcard-emoji {
+    padding: 2rem;
+}
+
+/* Adding animated circles like the hero section */
+.about-us-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4c69d8, #6e2edc, #2ecc71, #e74c3c);
+    opacity: 0.8;
+    z-index: 0;
+    animation: backgroundShift 10s ease-in-out infinite;
+}
+
+.flashcard {
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    width: 65vw; /* Ensures the flashcard takes up 65% of the screen width */
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    z-index: 1; /* Ensures the flashcard stays above the background */
+}
+
+.flashcard-emoji {
     font-size: 3rem;
-  }
-  
-  .flashcard-title {
-    font-size: 1.8rem;
-    margin: 1rem 0;
-    color: #4c69d8;
-  }
-  
-  .flashcard-description {
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
-  .arrow {
-    background-color: #f1c40f;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 1rem;
-    font-size: 1.5rem;
-    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.flashcard-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.flashcard-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .left-arrow {
-    left: 10px;
-  }
-  
-  .right-arrow {
-    right: 10px;
-  }
-  
-  .arrow:hover {
-    background-color: #e67e22;
-    transform: scale(1.1);
-  }
-  
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+    padding: 10px;
+    z-index: 2; /* Ensures arrows stay on top */
+}
+
+.left-arrow {
+    left: 5vw; /* Adjust spacing */
+}
+
+.right-arrow {
+    right: 5vw; /* Adjust spacing */
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    transform: scale(1.1); /* Visual feedback for interaction */
+}
+
+/* Animated circles like in the hero section */
+.animated-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: float 5s infinite ease-in-out;
+}
+
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6, .circle7, .circle8 {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Define the positions and sizes of circles */
+.circle1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+}
+
+.circle2 {
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.circle3 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.circle4 {
+    width: 90px;
+    height: 90px;
+    top: 30%;
+    right: 20%;
+    animation-delay: 3s;
+}
+
+.circle5 {
+    width: 110px;
+    height: 110px;
+    bottom: 20%;
+    left: 25%;
+    animation-delay: 1.5s;
+}
+
+.circle6 {
+    width: 130px;
+    height: 130px;
+    top: 45%;
+    left: 20%;
+    animation-delay: 2.5s;
+}
+
+.circle7 {
+    width: 90px;
+    height: 90px;
+    bottom: 25%;
+    right: 30%;
+    animation-delay: 5s;
+}
+
+.circle8 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    right: 10%;
+    animation-delay: 3.5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
