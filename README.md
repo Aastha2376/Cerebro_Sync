@@ -1,2 +1,3 @@
 # Cerebro_Sync [Ongoing project]
-A MERN stack web app that combines AI and data science to boost student productivity through task management, a Pomodoro timer, habit tracking, and personalized insights.
+A MERN stack web app that combines AI and data science to boost student productivity through task management, a Pomodoro timer, habit tracking, and personalized insights. 
+The web app would leverage AI to analyze students' task completion patterns and suggest optimized schedules or study techniques. The Pomodoro timer would integrate with habit tracking to monitor study sessions and breaks, providing insights on productivity trends, could track long-term habits and offer personalized feedback to help students maintain consistency and improve focus. The web application might also include features like visual progress dashboards and motivational nudges based on user behavior.
